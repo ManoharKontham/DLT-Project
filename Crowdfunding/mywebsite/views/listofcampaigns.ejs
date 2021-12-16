@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Login Example</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../public/stylesheets/style.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<style>
+    table, th, td {
+      border:1px solid black;
+    }
+    </style>
+<body style="background-color:powderblue;">
+    <div class="container">
+        <div class="wrapper">
+       
+            <% for (var i = 0; i < listCampaigns.length; i++) { %>
+                <li class="timeline-yellow">
+                    <div class="timeline-time">
+                      <table style="width:100%">
+                        <tr>
+                            <th>id</th>
+                            <th>campaigname</th>
+                            <th>username</th>
+                            <th>startDate</th>
+                            <th>totalAmount</th>
+                            <th>deadline</th>
+                            <th>ethereumAddress</th>
+                        </tr>
+                        <tr>
+                        <td><%= listCampaigns[i].id %></td>
+                        <td><%= listCampaigns[i].campaigname %></td>
+                        <td><%= listCampaigns[i].username %></td>
+                        <td><%= listCampaigns[i].startDate %></td>
+                        <td><%= listCampaigns[i].totalAmount %></td>
+                        <td><%= listCampaigns[i].deadline %></td>
+                        <td><%= listCampaigns[i].ethereumAddress %></td>
+                        </tr>
+                    </table>
+
+                        <p><a href="/donate" class="btn btn-primary" role="button">donate</a></p>
+
+                    </div>  
+                </li>
+                <% } %>
+                
+            
+        </div>
+    </div>
+    <div class="container">
+        <div class="wrapper">
+            <p><a href="/campaign" class="btn btn-primary" role="button">Create Campaign</a></p>
+            </div>
+            </div>
+
+</body>
+</html>
