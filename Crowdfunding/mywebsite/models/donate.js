@@ -1,16 +1,12 @@
 const mongoose = require("mongoose")
 
 const DonateSchema = mongoose.Schema({
-	id: {
-       type: "String",
-       unique: true
-    },
-	campaigname: {
-        type: "String"
+   campaigname: {
+      type: "String"
      },
-   
-     donationAmount : {
-        type: "String"
+     
+   donationAmount : {
+      type: "String"
      }
    
 })
